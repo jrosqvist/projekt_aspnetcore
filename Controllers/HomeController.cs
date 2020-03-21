@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using asp_projekt.Models;
 using Microsoft.AspNetCore.Authorization;
+using asp_projekt.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace asp_projekt.Controllers
 {
@@ -14,9 +16,12 @@ namespace asp_projekt.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApplicationDbContext _context;
+
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
@@ -27,10 +32,17 @@ namespace asp_projekt.Controllers
         {
             return View();
         }
-        public IActionResult Restaurant()
+
+       
+        // Uppdaterad för att generera listor med maträtter och dricka
+        public ActionResult Restaurant()
         {
-            return View();
+            ViewModel mymodel = new ViewModel();
+            mymodel.Dish = _context.Dish.ToList();
+            mymodel.Drink = _context.Drink.ToList();
+            return View(mymodel);
         }
+
         public IActionResult Contact()
         {
             return View();

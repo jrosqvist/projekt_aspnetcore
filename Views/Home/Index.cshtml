@@ -2,7 +2,7 @@
     ViewData["Title"] = "Startsidan";
 }
 
-    <div class="parallax-container" id="main-banner">
+    <div class="parallax-container banner">
         <div class="parallax"><img src="~/images/parallax4.jpg" class="responsive-img z-depth-1"></div>
     </div>
 
@@ -131,7 +131,7 @@
                         </p>
                     </div>
                     <div class="card-action">
-                        <a href="#">Läs mer</a>
+                        <a asp-area="" asp-controller="Home" asp-action="Restaurant">Läs mer</a>
                     </div>
                 </div>
             </div>
@@ -152,45 +152,51 @@
                         </p>
                     </div>
                     <div class="card-action">
-                        <a href="#">Läs mer</a>
+                        <a asp-area="" asp-controller="Home" asp-action="Restaurant">Läs mer</a>
                     </div>
                 </div>
             </div>
-            <div class="col s12 l8 offset-l2">
-                <ul class="tabs">
-                    <li class="tab col s6"><a href="#tab-one" class="orange-text">Meny</a></li>
-                    <li class="tab col s6"><a href="#tab-two" class="orange-text">Vinlista</a></li>
-                </ul>
-                <div class="col s12" id="tab-one">
-                    <p>
-                        It was popularised in the 1960s with the release of
-                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum
-                    </p>
-                </div>
-                <div class="col s12" id="tab-two">
-                    <p>
-                        It was popularised in the 1960s with the release of
-                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum
-                    </p>
-                    <p>
-                        It was popularised in the 1960s with the release of
-                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum
-                    </p>
-                </div>
-            </div>
+
+            <!--
+    <div class="col s12 l8 offset-l2">
+        <ul class="tabs">
+            <li class="tab col s6"><a href="#tab-one" class="orange-text">Meny</a></li>
+            <li class="tab col s6"><a href="#tab-two" class="orange-text">Vinlista</a></li>
+        </ul>
+        <div class="col s12" id="tab-one">
+            <p>
+                It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum
+            </p>
+        </div>
+        <div class="col s12" id="tab-two">
+            <p>
+                It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum
+            </p>
+            <p>
+                It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum
+            </p>
+        </div>
+    </div>
+        -->
+
 
         </div>
     </div>
 </section>
 <!-- Slut på sektion-->
+
 <!-- Parallax-->
 <div class="parallax-container parallax-bottom">
     <div class="parallax"><img src="~/images/parallax3.jpg" class="responsive-img z-depth-1"></div>
 </div>
 <!-- Slut på parallax-->
+
 <!--Kontakt-sektionen-->
 <section class="big-section scrollspy" id="contact">
     <div class="container">

@@ -114,6 +114,7 @@ function addDarkTheme() {
     $("tr").addClass("white-text");
     $(".sidenav").addClass("grey darken-4");
     $(".sidenav a").addClass("white-text");
+    $("li").addClass("white-text");
 }
 
 function removeDarkTheme() {
@@ -137,6 +138,7 @@ function removeDarkTheme() {
     $(".select-wrapper li").removeClass("grey darken-4");
     $("th").removeClass("white-text");
     $("tr").removeClass("white-text");
+    $("li").removeClass("white-text");
 }
 
 // Behåller temat mha local storage

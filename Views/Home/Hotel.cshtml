@@ -3,8 +3,13 @@
     ViewData["Title"] = "Hotellet";
 }
 
-
-<div class="container full-height">
+    <div class="parallax-container banner">
+        <div class="parallax"><img src="~/images/parallax1.jpg" class="responsive-img z-depth-1"></div>
+    </div>
+    <div class="container full-height">
         <h2>Hotellet</h2>
         <p>Information om hotellet...</p>
-</div>
+
+        <h4>Boka hotellrum nedan</h4>
+        <a asp-area="" asp-controller="HotelBooking" asp-action="Create">Boka hotell</a>
+    </div>

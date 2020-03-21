@@ -15,9 +15,9 @@ a {
     color: orange;
 }
 
-/* Första bilden på startsidan */
-#main-banner {
-    min-height: 75vh;
+/* Stora bilder högst upp */
+.banner {
+    min-height: 50vh;
 }
 
 /* Huvudmeny */
@@ -49,6 +49,10 @@ a {
     margin-left:32px;
 }
 
+/* Min-height 100vh för alla undersidor */
+.content {
+    min-height:100vh;
+}
 .pitch {
     border-bottom: 2px solid rgb(248, 198, 104);
 }
@@ -147,11 +151,31 @@ body .darkgray {
 }
 
 
+@media(max-width:1100px) {
+    .banner {
+        max-height: 60vh;
+    }
+}
 
 @media(max-width:700px) {
     .parallax-bottom {
         max-height: 250px;
     }
+    .banner {
+        max-height: 50vh;
+    }
 }
+
+@media(max-width:600px) {
+    .parallax-bottom {
+        max-height: 250px;
+    }
+
+    .banner {
+        max-height: 25vh;
+    }
+}
+
+
 
 

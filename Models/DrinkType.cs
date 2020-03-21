@@ -3,6 +3,6 @@ namespace asp_projekt.Models
 {
     public enum DrinkType
     {
-        Vitt, Rött, Rosé, Mousserande, Öl, Sprit, Cider, Dessertvin, Drink, Läsk, Juice, Alkoholfritt
+        Vitt, Rött, Rosé, Mousserande, Öl, Cider, Sprit, Alkoholfritt
     }
 }

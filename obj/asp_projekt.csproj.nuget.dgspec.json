@@ -14,7 +14,7 @@
         "outputPath": "/Users/joakimrosqvist/Desktop/asp_projekt/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/joakimrosqvist/.nuget/NuGet/NuGet.Config"
+          "/Users/joakimrosqvist/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

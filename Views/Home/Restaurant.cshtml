@@ -1,10 +1,166 @@
 ﻿
+
 @{
     ViewData["Title"] = "Restaurangen";
 }
 
-
-<div class="container full-height">
-        <h2>Restaurangen</h2>
-        <p>Information om restaurangen...</p>
+<!-- Parallax-->
+<div class="parallax-container banner">
+    <div class="parallax"><img src="~/images/parallax2.jpg" class="responsive-img z-depth-1"></div>
 </div>
+<!-- Slut på parallax-->
+<div class="container full-height">
+    <h2>Restaurangen</h2>
+    <p>Information om restaurangen...</p>
+
+    <h4>Boka bord nedan</h4>
+    <a asp-area="" asp-controller="RestaurantBooking" asp-action="Create">Boka bord</a>
+
+
+    <div class="row">
+
+        <div class="col s12 l8 offset-l2">
+            <ul class="tabs">
+                <li class="tab col s6"><a href="#tab-one" class="orange-text">Meny</a></li>
+                <li class="tab col s6"><a href="#tab-two" class="orange-text">Vinlista</a></li>
+            </ul>
+            <div class="col s12" id="tab-one">
+
+
+
+
+                <h4>Förrätter</h4>
+                @foreach (Dish dish in Model.Dish)
+                {
+                    @if (dish.Type == DishType.Förrätt)
+                    {
+                        <p>@dish.Name</p>
+                        <p>@dish.Description</p>
+                        <p>@dish.Price :-</p>
+                    }
+                }
+
+                <h4>Varmrätter</h4>
+                @foreach (Dish dish in Model.Dish)
+                {
+                    @if (dish.Type == DishType.Varmrätt)
+                    {
+                        <p>@dish.Name</p>
+                        <p>@dish.Description</p>
+                        <p>@dish.Price :-</p>
+                    }
+                }
+
+                <h4>Efterrätter</h4>
+                @foreach (Dish dish in Model.Dish)
+                {
+                    @if (dish.Type == DishType.Efterrätt)
+                    {
+                        <p>@dish.Name</p>
+                        <p>@dish.Description</p>
+                        <p>@dish.Price :-</p>
+                    }
+                }
+
+
+            </div>
+            <div class="col s12" id="tab-two">
+
+                <h4>Röda viner</h4>
+                @foreach (Drink drink in Model.Drink)
+                {
+                    @if (drink.Type == DrinkType.Rött)
+                    {
+                        <p>@drink.Name</p>
+                        <p>@drink.Description</p>
+                        <p>@drink.Price :-</p>
+                    }
+                }
+
+                <h4>Vita viner</h4>
+                @foreach (Drink drink in Model.Drink)
+                {
+                    @if (drink.Type == DrinkType.Vitt)
+                    {
+                        <p>@drink.Name</p>
+                        <p>@drink.Description</p>
+                        <p>@drink.Price :-</p>
+                    }
+                }
+
+                <h4>Roséviner</h4>
+                @foreach (Drink drink in Model.Drink)
+                {
+                    @if (drink.Type == DrinkType.Rosé)
+                    {
+                        <p>@drink.Name</p>
+                        <p>@drink.Description</p>
+                        <p>@drink.Price :-</p>
+                    }
+                }
+
+                <h4>Mousserande viner</h4>
+                @foreach (Drink drink in Model.Drink)
+                {
+                    @if (drink.Type == DrinkType.Mousserande)
+                    {
+                        <p>@drink.Name</p>
+                        <p>@drink.Description</p>
+                        <p>@drink.Price :-</p>
+                    }
+                }
+
+                <h4>Öl & Cider</h4>
+                @foreach (Drink drink in Model.Drink)
+                {
+                    @if (drink.Type == DrinkType.Öl || drink.Type == DrinkType.Cider)
+                    {
+                        <p>@drink.Name</p>
+                        <p>@drink.Description</p>
+                        <p>@drink.Price :-</p>
+                    }
+                }
+
+                <h4>Sprit & Drinkar</h4>
+                @foreach (Drink drink in Model.Drink)
+                {
+                    @if (drink.Type == DrinkType.Sprit)
+                    {
+                        <p>@drink.Name</p>
+                        <p>@drink.Description</p>
+                        <p>@drink.Price :-</p>
+                    }
+                }
+
+                <h4>Alkoholfritt</h4>
+                @foreach (Drink drink in Model.Drink)
+                {
+                    @if (drink.Type == DrinkType.Alkoholfritt)
+                    {
+                        <p>@drink.Name</p>
+                        <p>@drink.Description</p>
+                        <p>@drink.Price :-</p>
+                    }
+                }
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+

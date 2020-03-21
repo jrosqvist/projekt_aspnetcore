@@ -3,9 +3,69 @@
     ViewData["Title"] = "Kontakt";
 }
 
+<!-- Parallax-->
+<div class="parallax-container banner">
+    <div class="parallax"><img src="~/images/contact.jpg" class="responsive-img z-depth-1"></div>
+</div>
+<!-- Slut på parallax-->
 
 <div class="container full-height">
-        <h2>Kontakt</h2>
-        <p>Kontakta oss här...</p>
+    <!--Kontakt-sektionen-->
+    <section class="big-section scrollspy" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 l5">
+                    <h3>Kontakta oss</h3>
+                    <p>
+                        It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of
+                        Letraset sheets containing Lorem
+                    </p>
+                    <p>
+                        It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of
+                        Letraset sheets containing Lorem
+                    </p>
+
+                </div>
+
+
+                <!--Kontaktformulär-->
+                <div class="col s12 l5 offset-l2" id="contact-form">
+                    <form action="#">
+                        <div class="input-field">
+                            <i class="material-icons prefix">person</i>
+                            <input type="text" id="name">
+                            <label for="name">Ditt namn</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">email</i>
+                            <input type="text" id="email">
+                            <label for="email">Din e-post</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">message</i>
+                            <textarea name="message" id="message" class="materialize-textarea"></textarea>
+                            <label for="message">Ditt meddelande</label>
+                        </div>
+                        <div class="input-field center">
+                            <p>Vill du bli kontaktad via telefon?</p>
+                            <p>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Ja</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="input-field right">
+                            <button class="btn orange">Skicka</button>
+                        </div>
+                    </form>
+                </div>
+                <!--Slut på kontaktformulär-->
+            </div>
+        </div>
+    </section>
+    <!--Slut på kontakt-sektionen-->
 
 </div>
