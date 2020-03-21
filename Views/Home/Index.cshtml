@@ -1,0 +1,250 @@
+﻿@{
+    ViewData["Title"] = "Startsidan";
+}
+
+    <div class="parallax-container" id="main-banner">
+        <div class="parallax"><img src="~/images/parallax4.jpg" class="responsive-img z-depth-1"></div>
+    </div>
+
+<div class="container pitch">
+    <div class="row">
+        <h2 class="center orange-text" id="pitch-title">Pelican Palace Hotell & Restaurang </h2>
+    </div>
+</div>
+
+
+<!--Hotellet -->
+<section class="big-section scrollspy" id="hotel">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 l10 offset-l1">
+                <h3>Hotellet</h3>
+                <p>
+                    It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                    software like Aldus PageMaker including versions of Lorem Ipsum
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sektion-->
+<section class="big-section scrollspy">
+    <div class="container">
+        <div class="row">
+
+            <div class="col s12 l4 m10 offset-m1">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="~/images/doubleroom.jpg" alt="" class="materialboxed">
+                        <a asp-area="" asp-controller="HotelBooking" asp-action="Create" class="halfway-fab btn-floating orange">
+                            <i class="material-icons">hotel</i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Dubbelrum</span>
+                        <p>
+                            It has survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a asp-area="" asp-controller="HotelBooking" asp-action="Create">Boka!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 l4 m10 offset-m1">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="~/images/superiorroom.jpg" alt="" class="materialboxed">
+                        <a asp-area="" asp-controller="HotelBooking" asp-action="Create" class="halfway-fab btn-floating orange">
+                            <i class="material-icons">hotel</i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Dubbelrum Superior</span>
+                        <p>
+                            It has survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a asp-area="" asp-controller="HotelBooking" asp-action="Create">Boka!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 l4 m10 offset-m1">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="~/images/singleroom.jpg" alt="" class="materialboxed">
+                        <a asp-area="" asp-controller="HotelBooking" asp-action="Create" class="halfway-fab btn-floating orange">
+                            <i class="material-icons">hotel</i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Enkelrum</span>
+                        <p>
+                            It has survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a asp-area="" asp-controller="HotelBooking" asp-action="Create">Boka!</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Slut på sektion-->
+<!-- Sektion-->
+<section class="big-section scrollspy" id="restaurant">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 l10 offset-l1" id="restaurant-info">
+                <h3>Restaurangen</h3>
+                <p>
+                    It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                    Letraset sheets containing.
+                </p>
+            </div>
+
+            <div class="col s12 l6 m10 offset-m1">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="~/images/food.jpg" alt="" class="materialboxed">
+                        <a href="#" class="halfway-fab btn-floating orange">
+                            <i class="material-icons">local_dining</i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Äta</span>
+                        <p>
+                            It has survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Läs mer</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 l6 m10 offset-m1">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="~/images/wine.jpg" alt="" class="materialboxed">
+                        <a href="#" class="halfway-fab btn-floating orange">
+                            <i class="material-icons">local_dining</i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Dricka</span>
+                        <p>
+                            It has survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Läs mer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 l8 offset-l2">
+                <ul class="tabs">
+                    <li class="tab col s6"><a href="#tab-one" class="orange-text">Meny</a></li>
+                    <li class="tab col s6"><a href="#tab-two" class="orange-text">Vinlista</a></li>
+                </ul>
+                <div class="col s12" id="tab-one">
+                    <p>
+                        It was popularised in the 1960s with the release of
+                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                        software like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                </div>
+                <div class="col s12" id="tab-two">
+                    <p>
+                        It was popularised in the 1960s with the release of
+                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                        software like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                    <p>
+                        It was popularised in the 1960s with the release of
+                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                        software like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Slut på sektion-->
+<!-- Parallax-->
+<div class="parallax-container parallax-bottom">
+    <div class="parallax"><img src="~/images/parallax3.jpg" class="responsive-img z-depth-1"></div>
+</div>
+<!-- Slut på parallax-->
+<!--Kontakt-sektionen-->
+<section class="big-section scrollspy" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 l5">
+                <h3>Kontakta oss</h3>
+                <p>
+                    It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                    Letraset sheets containing Lorem
+                </p>
+                <p>
+                    It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                    Letraset sheets containing Lorem
+                </p>
+
+            </div>
+
+
+            <!--Kontaktformulär-->
+            <div class="col s12 l5 offset-l2" id="contact-form">
+                <form action="#">
+                    <div class="input-field">
+                        <i class="material-icons prefix">person</i>
+                        <input type="text" id="name">
+                        <label for="name">Ditt namn</label>
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix">email</i>
+                        <input type="text" id="email">
+                        <label for="email">Din e-post</label>
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix">message</i>
+                        <textarea name="message" id="message" class="materialize-textarea"></textarea>
+                        <label for="message">Ditt meddelande</label>
+                    </div>
+                    <div class="input-field center">
+                        <p>Vill du bli kontaktad via telefon?</p>
+                        <p>
+                            <label>
+                                <input type="checkbox">
+                                <span>Ja</span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="input-field right">
+                        <button class="btn orange">Skicka</button>
+                    </div>
+                </form>
+            </div>
+            <!--Slut på kontaktformulär-->
+        </div>
+    </div>
+</section>
+<!--Slut på kontakt-sektionen-->

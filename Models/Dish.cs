@@ -1,0 +1,36 @@
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace asp_projekt.Models
+{
+    public partial class Dish
+    {
+        public Dish()
+        {
+        }
+
+        [Required(ErrorMessage = "Obligatoriskt fält!")]
+        public int Id { get; set; }
+
+        [Display(Name = "Typ")]
+        [Required(ErrorMessage = "Obligatoriskt fält!")]
+        public DishType Type { get; set; }
+
+        [Display(Name = "Namn")]
+        [Required(ErrorMessage = "Obligatoriskt fält!")]
+        [MaxLength(128, ErrorMessage = "Max 128 tecken!")]
+        public string Name { get; set; }
+
+        [Display(Name = "Beskrivning")]
+        [Required(ErrorMessage = "Obligatoriskt fält!")]
+        [MaxLength(256, ErrorMessage = "Max 256 tecken!")]
+        public string Description { get; set; }
+
+        [Display(Name = "Pris")]
+        [Required(ErrorMessage = "Obligatoriskt fält!")]
+        [Range(1, 10000, ErrorMessage = "Max 10 000")]
+        [RegularExpression("([0-9]+)", ErrorMessage = "Bara siffror tack!")]
+        public int Price { get; set; }
+
+    }
+}

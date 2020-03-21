@@ -1,0 +1,237 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"] - asp_projekt</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelican Palace</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Anton|Heebo|Mukta|Righteous|Teko|Trade+Winds&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+
+    <!--Huvudmeny -->
+    <header id="main-header" class="z-depth-1">
+        <nav class="nav-wraper">
+            <!-- <div class="container">-->
+            <a class="brand-logo black-text" asp-area="" asp-controller="Home" asp-action="Index">Pelican Palace</a>
+            <a href="#" class="sidenav-trigger hide-on-lar" data-target="mobile-links">
+                <i class="material-icons black-text">menu</i>
+            </a>
+
+            <ul class="right hide-on-med-and-down">
+                @if (!SignInManager.IsSignedIn(User))
+                {
+                    <li class="nav-item">
+                        <a class="black-text" asp-area="" asp-controller="Home" asp-action="Index">Startsidan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="black-text" asp-area="" asp-controller="HotelBooking" asp-action="Create">Boka hotell</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="black-text" asp-area="" asp-controller="RestaurantBooking" asp-action="Create">Boka bord</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="black-text" asp-area="" asp-controller="Home" asp-action="Hotel">Hotellet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="black-text" asp-area="" asp-controller="Home" asp-action="Restaurant">Restaurangen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="black-text" asp-area="" asp-controller="Home" asp-action="Contact">Kontakt</a>
+                    </li>
+                    <li>
+                        <a asp-area="Identity" asp-page="/Account/Login">
+                            <i class="material-icons orange-text login-i">account_circle</i>
+                        </a>
+                    </li>
+
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="black-text" asp-area="" asp-controller="Home" asp-action="Index">Startsidan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="black-text" asp-area="" asp-controller="Home" asp-action="Admin">Administration</a>
+                    </li>
+                    <li>
+                        <a asp-area="Identity" asp-page="/Account/Manage/Index">
+                            <i class="material-icons green-text login-i">account_circle</i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                            <button type="submit" class="nav-link btn btn-link text-dark">Logga ut</button>
+                        </form>
+                    </li>
+                }
+
+                <!--<partial name="_LoginPartial" />-->
+
+            </ul>
+            <!--</div>-->
+        </nav>
+    </header>
+    <!--Slut på uvudmeny -->
+
+
+    <!--Mobilmeny -->
+    <ul class="sidenav" id="mobile-links">
+        @if (!SignInManager.IsSignedIn(User))
+        {
+            <li class="nav-item">
+                <a class="black-text" asp-area="" asp-controller="Home" asp-action="Index">Startsidan</a>
+            </li>
+            <li class="nav-item">
+                <a class="black-text" asp-area="" asp-controller="HotelBooking" asp-action="Create">Boka hotell</a>
+            </li>
+            <li class="nav-item">
+                <a class="black-text" asp-area="" asp-controller="RestaurantBooking" asp-action="Create">Boka bord</a>
+            </li>
+            <li>
+                <a asp-area="Identity" asp-page="/Account/Login">
+                    <i class="material-icons orange-text login-i">account_circle</i>
+                </a>
+            </li>
+
+        }
+        else
+        {
+            <li class="nav-item">
+                <a class="black-text" asp-area="" asp-controller="Home" asp-action="Index">Startsidan</a>
+            </li>
+            <li class="nav-item">
+                <a class="black-text" asp-area="" asp-controller="Home" asp-action="Admin">Administration</a>
+            </li>
+            <li>
+                <a asp-area="Identity" asp-page="/Account/Manage/Index">
+                    <i class="material-icons green-text login-i">account_circle</i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    <button type="submit" class="btn orange">Logga ut</button>
+                </form>
+            </li>
+        }
+    </ul>
+    <!-- Slut på mobilmenyn-->
+
+
+
+    <div class="content">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!--Sidfot-->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 l8">
+                    <h5>Om sidan</h5>
+                    <p>
+                        It was popularised in the 1960s with the release of
+                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                        software like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                    <div class="row">
+
+                        <div class="col s3 l3 center">
+                            <p flow-text>Bokningar</p>
+                            <div class="counter" data-target="50">0</div>
+                        </div>
+
+                        <div class="col s3 l3 center">
+                            <p flow-text>Antal rum</p>
+                            <div class="counter" data-target="144">0</div>
+                        </div>
+
+                        <div class="col s3 l3 center">
+                            <p flow-text>Likes</p>
+                            <div class="counter" data-target="220">0</div>
+                        </div>
+
+                        <div class="col s3 l3 center">
+                            <p flow-text>Anställda</p>
+                            <div class="counter" data-target="32">0</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col s12 l2 offset-l2">
+                    <h5>Länkar</h5>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Youtube</a></li>
+                    </ul>
+                    <!--Knapp för modal-->
+                    <a href="#info" class="modal-trigger">Villkor</a>
+                </div>
+            </div>
+        </div>
+        <!--Nedre sidfoten-->
+        <div class="footer-copyright">
+            <div class="container center-align">
+                <p>&copy; Pelican Palace 2020</p>
+            </div>
+        </div>
+        <!--SLut på nedre sidfot-->
+    </footer>
+    <!-- Slut på sidfot -->
+    <!--Modal-->
+    <div class="container">
+        <div class="modal" id="info">
+            <div class="modal-content">
+                <h4>Information</h4>
+                <p>
+                    It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#contact-section" class="modal-close btn orange waves-light">
+                    Acceptera och
+                    stäng
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--Slut på modal-->
+
+    <div id="theme-changer">
+        <input type="checkbox" id="theme-box" />
+        <label for="theme-box" id="theme-label">
+            <span id="ball"></span>
+        </label>
+    </div>
+    <!-- jQuery -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!--
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        -->
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

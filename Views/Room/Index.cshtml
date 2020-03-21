@@ -1,0 +1,97 @@
+@model IEnumerable<asp_projekt.Models.Room>
+
+@{
+    ViewData["Title"] = "Rum";
+}
+
+    <div class="container">
+        <h2>Rum</h2>
+
+        <p>
+            <a asp-action="Create">Lägg till ny</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RoomName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NoOfRooms)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PricePerNight)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MaxNoOfPersons)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SquareMeter)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BedWidth)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.View)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BreakFast)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RoomName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NoOfRooms)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PricePerNight)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MaxNoOfPersons)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SquareMeter)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BedWidth)
+                        </td>
+                        <td>
+                            @if (item.View == true)
+                            {
+                                <p>Ja</p>
+                            }
+                            else
+                            {
+                                <p>Nej</p>
+                            }
+                            <!-- Html.DisplayFor(modelItem => item.View)-->
+                        </td>
+                        <td>
+                            @if (item.BreakFast == true)
+                            {
+                                <p>Ja</p>
+                            }
+                            else
+                            {
+                                <p>Nej</p>
+                            }
+                            <!--Html.DisplayFor(modelItem => item.BreakFast)-->
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Redigera</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Information</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Radera</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>

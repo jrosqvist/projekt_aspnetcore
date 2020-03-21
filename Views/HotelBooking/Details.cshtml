@@ -1,0 +1,74 @@
+@model asp_projekt.Models.HotelBooking
+
+@{
+    ViewData["Title"] = "Bokningsinformation";
+}
+
+    <div class="container">
+        <h2>Bokningsinformation</h2>
+
+        <div>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.CheckIn)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.CheckIn)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.CheckOut)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.CheckOut)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.NoOfPersons)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.NoOfPersons)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Room)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Room.RoomName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PhoneNumber)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ExtraInformation)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ExtraInformation)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.Id">Redigera</a> |
+            <a asp-action="Index">Tillbaka</a>
+        </div>
+
+    </div>

@@ -1,0 +1,82 @@
+@model asp_projekt.Models.Room
+
+@{
+    ViewData["Title"] = "Information om rum";
+}
+
+    <div class="container">
+        <h2>Rumsinformation</h2>
+
+        <div>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RoomName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.RoomName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.NoOfRooms)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.NoOfRooms)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.PricePerNight)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PricePerNight)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.MaxNoOfPersons)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.MaxNoOfPersons)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.SquareMeter)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.SquareMeter)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.BedWidth)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.BedWidth)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.View)
+                </dt>
+                <dd class="col-sm-10">
+                    @if (Model.View == true)
+                    {
+                        <p>Ja</p>
+                    }
+                    else
+                    {
+                        <p>Nej</p>
+                    }
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.BreakFast)
+                </dt>
+                <dd class="col-sm-10">
+                    @if (Model.BreakFast == true)
+                    {
+                        <p>Ja</p>
+                    }
+                    else
+                    {
+                        <p>Nej</p>
+                    }
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.Id">Redigera</a> |
+            <a asp-action="Index">Tillbaka</a>
+        </div>
+
+    </div>

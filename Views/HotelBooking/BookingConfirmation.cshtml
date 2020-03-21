@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Bokningsbekräftelse";
+}
+
+    <div class="container full-height">
+        @if (ViewBag.CustomerName != null && ViewBag.CustomerName != "")
+        {
+            <h2>Tack för din bokning @ViewBag.CustomerName!</h2>
+            <p>En bokningsbekräftelse har skickats till din e-postadress</p>
+        }
+
+    </div>
+

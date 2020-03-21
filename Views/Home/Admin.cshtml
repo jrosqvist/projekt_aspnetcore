@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Admin";
+}
+
+<!-- Administration-->
+@if (SignInManager.IsSignedIn(User))
+{
+    <div id="admin-panel">
+
+        <div>
+            <a asp-area="" asp-controller="HotelBooking" asp-action="Index">Hotellbokningar</a>
+        </div>
+
+        <div>
+            <a asp-area="" asp-controller="RestaurantBooking" asp-action="Index">Bordsbokningar</a>
+        </div>
+        <div>
+            <a asp-area="" asp-controller="Room" asp-action="Index">Rumstyper</a>
+        </div>
+        <div>
+            <a asp-area="" asp-controller="Dish" asp-action="Index">Mat</a>
+        </div>
+        <div>
+            <a asp-area="" asp-controller="Drink" asp-action="Index">Dryck</a>
+        </div>
+    </div>
+}
+<!-- Administration-->
+
+<div class="container full-height">
+        <h2>Administration</h2>
+        <p>Välj vad du vill administrera bland länkarna ovan</p>
+</div>

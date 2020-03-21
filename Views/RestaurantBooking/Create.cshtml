@@ -1,0 +1,77 @@
+@model asp_projekt.Models.RestaurantBooking
+
+@{
+    ViewData["Title"] = "Boka bord";
+}
+
+<div class="container">
+
+    <h2 class="center">Boka bord</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col s12 l6">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="red-text"></div>
+                <div class="input-field">
+                    <label asp-for="Date"></label>
+                    <input asp-for="Date" type="text" class="date-picker" />
+                    <span asp-validation-for="Date" class="red-text"></span>
+                </div>
+                <div class="input-field">
+                    <label asp-for="Time"></label>
+                    <input asp-for="Time" type="text" class="timepicker">
+                    <span asp-validation-for="Time" class="red-text"></span>
+                </div>
+                <div class="input-field">
+                    <label asp-for="NoOfPersons"></label>
+                    <input asp-for="NoOfPersons" class="form-control" />
+                    <span asp-validation-for="NoOfPersons" class="red-text"></span>
+                </div>
+                <div class="input-field">
+                    <label asp-for="FirstName"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="red-text"></span>
+                </div>
+                <div class="input-field">
+                    <label asp-for="LastName"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="red-text"></span>
+                </div>
+                <div class="input-field">
+                    <label asp-for="PhoneNumber"></label>
+                    <input asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="red-text"></span>
+                </div>
+                <div class="input-field">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="red-text"></span>
+                </div>
+                <div class="input-field">
+                    <label asp-for="ExtraInformation"></label>
+                    <input asp-for="ExtraInformation" />
+                    <span asp-validation-for="ExtraInformation" class="red-text"></span>
+                </div>
+                <div class="input-field">
+                    <input type="submit" value="Boka" class="btn orange" />
+                </div>
+            </form>
+        </div>
+
+        <div class="col s12 l6">
+            <img src="~/images/restaurant.jpg" class="responsive-img z-depth-1">
+        </div>
+
+    </div>
+</div>
+
+<!--
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+-->
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,30 @@
+@model IEnumerable<asp_projekt.Models.HotelBooking>
+
+@{
+    ViewData["Title"] = "Hotellbokningar";
+}
+
+    <div class="container">
+        <h2>Hotellbokningar</h2>
+        <p>
+            <a asp-action="Create">Lägg till ny</a>
+        </p>
+
+        <form asp-action="Index" method="get">
+            <div class="form-actions no-color">
+                <p>
+                    Sök efter e-post eller efternamn
+                    <input type="text" name="SearchString" id="hotel-searchbox" value="@ViewData["currentFilter"]" />
+                    <!--<input type="submit" value="Sök" class="btn btn-default" /> |-->
+                    <a asp-action="Index">Visa alla</a>
+                </p>
+            </div>
+        </form>
+        <p>@ViewData["test"]</p>
+
+        <partial name="_HotelBookingPartial" />
+
+
+    </div>
+
+

@@ -1,0 +1,157 @@
+﻿
+* {
+    font-family: "Mukta", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Teko", sans-serif;
+}
+a {
+    color: orange;
+}
+
+/* Första bilden på startsidan */
+#main-banner {
+    min-height: 75vh;
+}
+
+/* Huvudmeny */
+.nav-wraper {
+    /*background-color: transparent;*/
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+    .nav-wraper ul li a:hover,
+    .sidenav li a:hover {
+        background-color: rgb(248, 198, 104) !important;
+    }
+
+.brand-logo {
+    font-family: "Righteous", cursive;
+    font-size: 1.8rem;
+}
+
+.nav-wraper .login-i {
+    line-height: 64px !important;
+    height: 64px !important;
+}
+
+.sidenav li .btn {
+    margin-left:32px;
+}
+
+.pitch {
+    border-bottom: 2px solid rgb(248, 198, 104);
+}
+/* Sektioner */
+.big-section {
+    min-height: 200px;
+}
+
+/* Tabbar */
+.tabs .indicator {
+    background-color: orange;
+}
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+    background: transparent;
+}
+
+#contact-form {
+    padding-top: 25px;
+}
+/* Sidfot */
+.page-footer {
+    background-color: rgb(61, 61, 61) !important;
+}
+
+.footer-copyright {
+    background-color: rgb(49, 49, 49) !important;
+}
+
+footer a {
+    color: orange;
+}
+
+.btn {
+    text-transform: none !important;
+}
+
+#theme-changer {
+    width:10%;
+    height:30px;
+    position:fixed;
+    bottom:0;
+    right:0;
+    background-color:orange;
+    display:flex;
+    justify-content:center;
+
+}
+#theme-label {
+    width:25px;
+    height:15px;
+    border-radius:20px;
+    background-color:white;
+    display:flex;
+    position:relative;
+    margin-top:7.5px;
+}
+
+#ball {
+    width:11px;
+    height:11px;
+    background-color:black;
+    position:absolute;
+    top:2px;
+    left:2px;
+    border-radius:50%;
+    transition: transform 0.1s linear;
+}
+
+#theme-box {
+    display:none;
+}
+
+#theme-box:checked + #theme-label #ball {
+    transform:translateX(12px);
+}
+
+body .darkgray {
+    background-color:darkgray!important;
+}
+
+
+
+/* Menyn för administartion (inloggade) */
+#admin-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: flex-start;
+    padding: 20px 0;
+    background-color: gray;
+}
+.full-height {
+    min-height:100vh;
+}
+
+
+
+@media(max-width:700px) {
+    .parallax-bottom {
+        max-height: 250px;
+    }
+}
+
+
