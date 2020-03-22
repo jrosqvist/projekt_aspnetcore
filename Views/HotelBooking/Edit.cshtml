@@ -13,15 +13,15 @@
                 <form asp-action="Edit">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <input type="hidden" asp-for="Id" />
-                    <div class="form-group">
-                        <label asp-for="CheckIn" class="control-label"></label>
-                        <input asp-for="CheckIn" class="form-control" />
-                        <span asp-validation-for="CheckIn" class="text-danger"></span>
+                    <div class="input-field">
+                        <label asp-for="CheckIn"></label>
+                        <input asp-for="CheckIn" type="text" class="date-picker" />
+                        <span asp-validation-for="CheckIn" class="red-text"></span>
                     </div>
-                    <div class="form-group">
-                        <label asp-for="CheckOut" class="control-label"></label>
-                        <input asp-for="CheckOut" class="form-control" />
-                        <span asp-validation-for="CheckOut" class="text-danger"></span>
+                    <div class="input-field">
+                        <label asp-for="CheckOut"></label>
+                        <input asp-for="CheckOut" type="text" class="date-picker" />
+                        <span asp-validation-for="CheckOut" class="red-text"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="NoOfPersons" class="control-label"></label>

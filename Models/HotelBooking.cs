@@ -13,12 +13,12 @@ namespace asp_projekt.Models
         [Required]
         public int Id { get; set; }
 
-        [Display(Name = "Datum för incheckning")]
+        [Display(Name = "Incheckning")]
         [DataType(DataType.Date)]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         public DateTime CheckIn { get; set; }
 
-        [Display(Name = "Datum för utcheckning")]
+        [Display(Name = "Utcheckning")]
         [DataType(DataType.Date)]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         public DateTime CheckOut { get; set; }
@@ -29,28 +29,28 @@ namespace asp_projekt.Models
         [Range(1, 100, ErrorMessage = "Minst 1 och max 100 gäster tack!")]
         public int NoOfPersons { get; set; }
 
-        [Display(Name = "Välj rumstyp")]
+        [Display(Name = "Rum")]
         public int RoomId { get; set; }
         public Room Room { get; set; }
 
-        [Display(Name = "Ditt förnamn")]
+        [Display(Name = "Förnamn")]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         [MaxLength(128, ErrorMessage = "Max 128 tecken!")]
         public string FirstName { get; set; }
 
-        [Display(Name = "Ditt efternamn")]
+        [Display(Name = "Efternamn")]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         [MaxLength(128, ErrorMessage = "Max 128 tecken!")]
         public string LastName { get; set; }
 
-        [Display(Name = "Ditt telefonnummer")]
+        [Display(Name = "Telefonnummer")]
         [DataType(DataType.PhoneNumber)]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         [RegularExpression("([0-9]+)", ErrorMessage = "Bara siffror tack!")]
         [StringLength(20, MinimumLength = 5, ErrorMessage ="5-20 siffror tack!")]
         public string PhoneNumber { get; set; }
 
-        [Display(Name = "Din e-postadress")]
+        [Display(Name = "E-postadress")]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         [EmailAddress(ErrorMessage = "Felaktig e-postadress")]
         [MaxLength(128, ErrorMessage = "Max 128 tecken!")]

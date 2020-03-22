@@ -13,14 +13,13 @@
         <form asp-action="Index" method="get">
             <div class="form-actions no-color">
                 <p>
-                    Sök efter e-post eller efternamn
+                    Sök bokning nedan
                     <input type="text" name="SearchString" id="hotel-searchbox" value="@ViewData["currentFilter"]" />
                     <!--<input type="submit" value="Sök" class="btn btn-default" /> |-->
                     <a asp-action="Index">Visa alla</a>
                 </p>
             </div>
         </form>
-        <p>@ViewData["test"]</p>
 
         <partial name="_HotelBookingPartial" />
 

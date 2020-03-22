@@ -16,7 +16,7 @@
 
         <div class="row">
             <div class="col-md-4">
-                <form asp-action="Create">
+                <form asp-action="Edit">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="input-field">
                         <label asp-for="RoomName" class="control-label"></label>
@@ -48,18 +48,7 @@
                         <input asp-for="BedWidth" class="form-control" />
                         <span asp-validation-for="BedWidth" class="text-danger"></span>
                     </div>
-                    <!--
-                <div class="form-group form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" asp-for="View" /> @Html.DisplayNameFor(model => model.View)
-                    </label>
-                </div>
-                <div class="form-group form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" asp-for="BreakFast" /> @Html.DisplayNameFor(model => model.BreakFast)
-                    </label>
-                </div>
-                    -->
+
                     <div class="input-field center">
                         <p>
                             <label>
@@ -82,61 +71,6 @@
                 </form>
             </div>
         </div>
-
-
-        <!--
-    <div class="row">
-        <div class="col-md-4">
-            <form asp-action="Edit">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="Id" />
-                <div class="form-group">
-                    <label asp-for="RoomName" class="control-label"></label>
-                    <input asp-for="RoomName" class="form-control" />
-                    <span asp-validation-for="RoomName" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="NoOfRooms" class="control-label"></label>
-                    <input asp-for="NoOfRooms" class="form-control" />
-                    <span asp-validation-for="NoOfRooms" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="PricePerNight" class="control-label"></label>
-                    <input asp-for="PricePerNight" class="form-control" />
-                    <span asp-validation-for="PricePerNight" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="MaxNoOfPersons" class="control-label"></label>
-                    <input asp-for="MaxNoOfPersons" class="form-control" />
-                    <span asp-validation-for="MaxNoOfPersons" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="SquareMeter" class="control-label"></label>
-                    <input asp-for="SquareMeter" class="form-control" />
-                    <span asp-validation-for="SquareMeter" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="BedWidth" class="control-label"></label>
-                    <input asp-for="BedWidth" class="form-control" />
-                    <span asp-validation-for="BedWidth" class="text-danger"></span>
-                </div>
-                <div class="form-group form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" asp-for="View" /> @Html.DisplayNameFor(model => model.View)
-                    </label>
-                </div>
-                <div class="form-group form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" asp-for="BreakFast" /> @Html.DisplayNameFor(model => model.BreakFast)
-                    </label>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Save" class="btn btn-primary" />
-                </div>
-            </form>
-        </div>
-    </div>
-        -->
 
         <div>
             <a asp-action="Index">Tillbaka</a>

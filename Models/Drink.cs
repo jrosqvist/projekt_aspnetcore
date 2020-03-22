@@ -12,7 +12,7 @@ namespace asp_projekt.Models
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         public int Id { get; set; }
 
-        [Display(Name = "Typ av dryck")]
+        [Display(Name = "Typ")]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         public DrinkType Type { get; set; }
 

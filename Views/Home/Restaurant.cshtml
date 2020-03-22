@@ -4,18 +4,24 @@
     ViewData["Title"] = "Restaurangen";
 }
 
-<!-- Parallax-->
-<div class="parallax-container banner">
-    <div class="parallax"><img src="~/images/parallax2.jpg" class="responsive-img z-depth-1"></div>
-</div>
-<!-- Slut på parallax-->
+
+<!-- Stor bild-->
+<div class="banner" id="restaurant-banner"></div>
+<!-- Slut på stor bild-->
+
+
 <div class="container full-height">
     <h2>Restaurangen</h2>
-    <p>Information om restaurangen...</p>
+    <p>
+        It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of
+        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+        software like Aldus PageMaker including versions of Lorem Ipsum
+    </p>
 
-    <h4>Boka bord nedan</h4>
-    <a asp-area="" asp-controller="RestaurantBooking" asp-action="Create">Boka bord</a>
-
+    <div class="booking-link-div">
+        <a class="orange-text booking-link" asp-area="" asp-controller="RestaurantBooking" asp-action="Create">Boka bord!</a>
+    </div>
 
     <div class="row">
 
@@ -34,9 +40,11 @@
                 {
                     @if (dish.Type == DishType.Förrätt)
                     {
-                        <p>@dish.Name</p>
-                        <p>@dish.Description</p>
-                        <p>@dish.Price :-</p>
+                        <div class="menu-item">
+                            <p class="menu-name">@dish.Name</p>
+                            <p class="menu-description">@dish.Description</p>
+                            <p class="menu-price">@dish.Price :-</p>
+                        </div>
                     }
                 }
 
@@ -45,9 +53,11 @@
                 {
                     @if (dish.Type == DishType.Varmrätt)
                     {
-                        <p>@dish.Name</p>
-                        <p>@dish.Description</p>
-                        <p>@dish.Price :-</p>
+                        <div class="menu-item">
+                            <p class="menu-name">@dish.Name</p>
+                            <p class="menu-description">@dish.Description</p>
+                            <p class="menu-price">@dish.Price :-</p>
+                        </div>
                     }
                 }
 
@@ -56,9 +66,11 @@
                 {
                     @if (dish.Type == DishType.Efterrätt)
                     {
-                        <p>@dish.Name</p>
-                        <p>@dish.Description</p>
-                        <p>@dish.Price :-</p>
+                        <div class="menu-item">
+                            <p class="menu-name">@dish.Name</p>
+                            <p class="menu-description">@dish.Description</p>
+                            <p class="menu-price">@dish.Price :-</p>
+                        </div>
                     }
                 }
 
@@ -71,9 +83,11 @@
                 {
                     @if (drink.Type == DrinkType.Rött)
                     {
-                        <p>@drink.Name</p>
-                        <p>@drink.Description</p>
-                        <p>@drink.Price :-</p>
+                        <div class="menu-item">
+                            <p class="menu-name">@drink.Name</p>
+                            <p class="menu-description">@drink.Description</p>
+                            <p class="menu-price">@drink.Price :-</p>
+                        </div>
                     }
                 }
 
@@ -82,9 +96,11 @@
                 {
                     @if (drink.Type == DrinkType.Vitt)
                     {
-                        <p>@drink.Name</p>
-                        <p>@drink.Description</p>
-                        <p>@drink.Price :-</p>
+                        <div class="menu-item">
+                            <p class="menu-name">@drink.Name</p>
+                            <p class="menu-description">@drink.Description</p>
+                            <p class="menu-price">@drink.Price :-</p>
+                        </div>
                     }
                 }
 
@@ -93,9 +109,11 @@
                 {
                     @if (drink.Type == DrinkType.Rosé)
                     {
-                        <p>@drink.Name</p>
-                        <p>@drink.Description</p>
-                        <p>@drink.Price :-</p>
+                        <div class="menu-item">
+                            <p class="menu-name">@drink.Name</p>
+                            <p class="menu-description">@drink.Description</p>
+                            <p class="menu-price">@drink.Price :-</p>
+                        </div>
                     }
                 }
 
@@ -104,9 +122,11 @@
                 {
                     @if (drink.Type == DrinkType.Mousserande)
                     {
-                        <p>@drink.Name</p>
-                        <p>@drink.Description</p>
-                        <p>@drink.Price :-</p>
+                        <div class="menu-item">
+                            <p class="menu-name">@drink.Name</p>
+                            <p class="menu-description">@drink.Description</p>
+                            <p class="menu-price">@drink.Price :-</p>
+                        </div>
                     }
                 }
 
@@ -115,9 +135,11 @@
                 {
                     @if (drink.Type == DrinkType.Öl || drink.Type == DrinkType.Cider)
                     {
-                        <p>@drink.Name</p>
-                        <p>@drink.Description</p>
-                        <p>@drink.Price :-</p>
+                        <div class="menu-item">
+                            <p class="menu-name">@drink.Name</p>
+                            <p class="menu-description">@drink.Description</p>
+                            <p class="menu-price">@drink.Price :-</p>
+                        </div>
                     }
                 }
 
@@ -126,9 +148,11 @@
                 {
                     @if (drink.Type == DrinkType.Sprit)
                     {
-                        <p>@drink.Name</p>
-                        <p>@drink.Description</p>
-                        <p>@drink.Price :-</p>
+                        <div class="menu-item">
+                            <p class="menu-name">@drink.Name</p>
+                            <p class="menu-description">@drink.Description</p>
+                            <p class="menu-price">@drink.Price :-</p>
+                        </div>
                     }
                 }
 
@@ -137,9 +161,11 @@
                 {
                     @if (drink.Type == DrinkType.Alkoholfritt)
                     {
-                        <p>@drink.Name</p>
-                        <p>@drink.Description</p>
-                        <p>@drink.Price :-</p>
+                        <div class="menu-item">
+                            <p class="menu-name">@drink.Name</p>
+                            <p class="menu-description">@drink.Description</p>
+                            <p class="menu-price">@drink.Price :-</p>
+                        </div>
                     }
                 }
 

@@ -31,24 +31,24 @@ namespace asp_projekt.Models
         [Range(1, 20, ErrorMessage = "Minst 1 och max 20 personer tack!")]
         public int NoOfPersons { get; set; }
 
-        [Display(Name = "Ditt förnamn")]
+        [Display(Name = "Förnamn")]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         [MaxLength(128, ErrorMessage = "Max 128 tecken!")]
         public string FirstName { get; set; }
 
-        [Display(Name = "Ditt efternamn")]
+        [Display(Name = "Efternamn")]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         [MaxLength(128, ErrorMessage = "Max 128 tecken!")]
         public string LastName { get; set; }
 
-        [Display(Name = "Ditt telefonnummer")]
+        [Display(Name = "Telefonnummer")]
         [DataType(DataType.PhoneNumber)]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         [RegularExpression("([0-9]+)", ErrorMessage = "Bara siffror tack!")]
         [StringLength(20, MinimumLength = 5, ErrorMessage = "5-20 siffror tack!")]
         public string PhoneNumber { get; set; }
 
-        [Display(Name = "Din e-postadress")]
+        [Display(Name = "E-postadress")]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         [EmailAddress(ErrorMessage = "Felaktig e-postadress")]
         [MaxLength(128, ErrorMessage = "Max 128 tecken!")]

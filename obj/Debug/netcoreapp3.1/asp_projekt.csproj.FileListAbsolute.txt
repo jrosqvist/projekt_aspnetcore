@@ -221,7 +221,6 @@
 /Users/joakimrosqvist/Desktop/asp_projekt/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml.g.cs
 /Users/joakimrosqvist/Desktop/asp_projekt/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/_StatusMessage.cshtml.g.cs
 /Users/joakimrosqvist/Desktop/asp_projekt/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Error.cshtml.g.cs
-/Users/joakimrosqvist/Desktop/asp_projekt/obj/Debug/netcoreapp3.1/Razor/Views/Home/Admin.cshtml.g.cs
 /Users/joakimrosqvist/Desktop/asp_projekt/obj/Debug/netcoreapp3.1/Razor/Views/Home/Contact.cshtml.g.cs
 /Users/joakimrosqvist/Desktop/asp_projekt/obj/Debug/netcoreapp3.1/Razor/Views/Home/Hotel.cshtml.g.cs
 /Users/joakimrosqvist/Desktop/asp_projekt/obj/Debug/netcoreapp3.1/Razor/Views/Home/Restaurant.cshtml.g.cs
@@ -242,3 +241,5 @@
 /Users/joakimrosqvist/Desktop/asp_projekt/obj/Debug/netcoreapp3.1/Razor/Views/Drink/Details.cshtml.g.cs
 /Users/joakimrosqvist/Desktop/asp_projekt/obj/Debug/netcoreapp3.1/Razor/Views/Drink/Edit.cshtml.g.cs
 /Users/joakimrosqvist/Desktop/asp_projekt/obj/Debug/netcoreapp3.1/Razor/Views/Drink/Index.cshtml.g.cs
+/Users/joakimrosqvist/Desktop/asp_projekt/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_DishPartial.cshtml.g.cs
+/Users/joakimrosqvist/Desktop/asp_projekt/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_DrinkPartial.cshtml.g.cs

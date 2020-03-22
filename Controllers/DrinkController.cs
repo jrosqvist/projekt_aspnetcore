@@ -26,6 +26,25 @@ namespace asp_projekt.Controllers
             return View(await _context.Drink.ToListAsync());
         }
 
+
+        // Partial som hanterar live-sökning via AJAX
+        public PartialViewResult Ajax(string searchString)
+        {
+            List<Drink> drinks;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                drinks = _context.Drink.Where(s => s.Name.Contains(searchString)
+                                       || s.Description.Contains(searchString)).ToList();
+            }
+            else
+            {
+                drinks = _context.Drink.ToList();
+            }
+            return PartialView("_DrinkPartial", drinks);
+        }
+
+
         // GET: Drink/Details/5
         [Authorize]
         public async Task<IActionResult> Details(int? id)

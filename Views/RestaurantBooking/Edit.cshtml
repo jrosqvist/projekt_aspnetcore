@@ -13,15 +13,15 @@
                 <form asp-action="Edit">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <input type="hidden" asp-for="Id" />
-                    <div class="form-group">
-                        <label asp-for="Date" class="control-label"></label>
-                        <input asp-for="Date" class="form-control" />
-                        <span asp-validation-for="Date" class="text-danger"></span>
+                    <div class="input-field">
+                        <label asp-for="Date"></label>
+                        <input asp-for="Date" type="text" class="date-picker" />
+                        <span asp-validation-for="Date" class="red-text"></span>
                     </div>
-                    <div class="form-group">
-                        <label asp-for="Time" class="control-label"></label>
-                        <input asp-for="Time" class="form-control" />
-                        <span asp-validation-for="Time" class="text-danger"></span>
+                    <div class="input-field">
+                        <label asp-for="Time"></label>
+                        <input asp-for="Time" type="text" class="timepicker">
+                        <span asp-validation-for="Time" class="red-text"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="NoOfPersons" class="control-label"></label>

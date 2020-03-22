@@ -5,16 +5,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>@ViewData["Title"] - asp_projekt</title>
+    <title>@ViewData["Title"] - Pelican Palace</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelican Palace</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Anton|Heebo|Mukta|Righteous|Teko|Trade+Winds&display=swap"
+    <link href="https://fonts.googleapis.com/css?family=Anton%7CHeebo%7CMukta%7CRighteous%7CTeko%7CTrade+Winds&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -57,7 +56,10 @@
                         <a class="black-text" asp-area="" asp-controller="Home" asp-action="Index">Startsidan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="black-text" asp-area="" asp-controller="Home" asp-action="Admin">Administration</a>
+                        <a class="black-text" asp-area="" asp-controller="Home" asp-action="Hotel">Hotellet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="black-text" asp-area="" asp-controller="Home" asp-action="Restaurant">Restaurangen</a>
                     </li>
                     <li>
                         <a asp-area="Identity" asp-page="/Account/Manage/Index">
@@ -66,7 +68,7 @@
                     </li>
                     <li class="nav-item">
                         <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                            <button type="submit" class="nav-link btn btn-link text-dark">Logga ut</button>
+                            <button type="submit" class="nav-link btn orange text-dark">Logga ut</button>
                         </form>
                     </li>
                 }
@@ -78,8 +80,30 @@
         </nav>
     </header>
     <!--Slut på uvudmeny -->
+    <!-- Administration-->
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <div id="admin-panel">
 
+            <div>
+                <a asp-area="" asp-controller="HotelBooking" asp-action="Index">Hotellbokningar</a>
+            </div>
 
+            <div>
+                <a asp-area="" asp-controller="RestaurantBooking" asp-action="Index">Bordsbokningar</a>
+            </div>
+            <div>
+                <a asp-area="" asp-controller="Room" asp-action="Index">Rum</a>
+            </div>
+            <div>
+                <a asp-area="" asp-controller="Dish" asp-action="Index">Mat</a>
+            </div>
+            <div>
+                <a asp-area="" asp-controller="Drink" asp-action="Index">Dryck</a>
+            </div>
+        </div>
+    }
+    <!-- Administration-->
     <!--Mobilmeny -->
     <ul class="sidenav" id="mobile-links">
         @if (!SignInManager.IsSignedIn(User))
@@ -109,7 +133,10 @@
                 <a class="black-text" asp-area="" asp-controller="Home" asp-action="Index">Startsidan</a>
             </li>
             <li class="nav-item">
-                <a class="black-text" asp-area="" asp-controller="Home" asp-action="Admin">Administration</a>
+                <a class="black-text" asp-area="" asp-controller="Home" asp-action="Hotel">Hotellet</a>
+            </li>
+            <li class="nav-item">
+                <a class="black-text" asp-area="" asp-controller="Home" asp-action="Restaurant">Restaurangen</a>
             </li>
             <li>
                 <a asp-area="Identity" asp-page="/Account/Manage/Index">
@@ -147,22 +174,22 @@
                     <div class="row">
 
                         <div class="col s3 l3 center">
-                            <p flow-text>Bokningar</p>
+                            <h6>Bokningar</h6>
                             <div class="counter" data-target="50">0</div>
                         </div>
 
                         <div class="col s3 l3 center">
-                            <p flow-text>Antal rum</p>
+                            <h6>Antal rum</h6>
                             <div class="counter" data-target="144">0</div>
                         </div>
 
                         <div class="col s3 l3 center">
-                            <p flow-text>Likes</p>
+                            <h6>Likes</h6>
                             <div class="counter" data-target="220">0</div>
                         </div>
 
                         <div class="col s3 l3 center">
-                            <p flow-text>Anställda</p>
+                            <h6>Anställda</h6>
                             <div class="counter" data-target="32">0</div>
                         </div>
 
@@ -210,13 +237,15 @@
     </div>
     <!--Slut på modal-->
 
+    <!--Ändring av färgschema-->
     <div id="theme-changer">
         <input type="checkbox" id="theme-box" />
         <label for="theme-box" id="theme-label">
             <span id="ball"></span>
         </label>
     </div>
-    <!-- jQuery -->
+    <!--Ändring av färgschema-->
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

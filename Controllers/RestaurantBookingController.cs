@@ -13,6 +13,7 @@ using MailKit.Net.Smtp;
 using MailKit;
 using MimeKit;
 using MimeKit.Text;
+using Microsoft.AspNetCore.Http;
 
 namespace asp_projekt.Controllers
 {
@@ -145,6 +146,9 @@ namespace asp_projekt.Controllers
                     client.Disconnect(true);
                 };
 
+                //Skapar sessionsvariabler för att skicka bokningsinfo till bokningsbekräftelsen
+                HttpContext.Session.SetString("customer-name", customerName);
+
                 return RedirectToAction(nameof(BookingConfirmation));
             }
 
@@ -158,6 +162,10 @@ namespace asp_projekt.Controllers
         // Bokningsbekräftelse
         public IActionResult BookingConfirmation()
         {
+            // Hämtar sessionsvariabeln med bokningsnamnet
+            string sess = HttpContext.Session.GetString("customer-name");
+            // Sparar i viewbag
+            ViewBag.CustomerName = sess;
             return View();
         }
 

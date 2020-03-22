@@ -3,13 +3,21 @@
     ViewData["Title"] = "Hotellet";
 }
 
-    <div class="parallax-container banner">
-        <div class="parallax"><img src="~/images/parallax1.jpg" class="responsive-img z-depth-1"></div>
-    </div>
-    <div class="container full-height">
-        <h2>Hotellet</h2>
-        <p>Information om hotellet...</p>
+<!-- Stor bild-->
+<div class="banner" id="hotel-banner"></div>
+<!-- Slut på stor bild-->
 
-        <h4>Boka hotellrum nedan</h4>
-        <a asp-area="" asp-controller="HotelBooking" asp-action="Create">Boka hotell</a>
+
+<div class="container full-height">
+    <h2>Hotellet</h2>
+    <p>
+        It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of
+        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+        software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <div class="booking-link-div">
+        <a class="orange-text booking-link" asp-area="" asp-controller="HotelBooking" asp-action="Create">Boka hotellrum!</a>
     </div>
+</div>

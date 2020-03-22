@@ -115,6 +115,8 @@ function addDarkTheme() {
     $(".sidenav").addClass("grey darken-4");
     $(".sidenav a").addClass("white-text");
     $("li").addClass("white-text");
+    $("dt").addClass("white-text");
+    $("dd").addClass("white-text");
 }
 
 function removeDarkTheme() {
@@ -135,10 +137,13 @@ function removeDarkTheme() {
     $("input").removeClass("white-text");
     $("textarea").removeClass("white-text");
     $(".select-dropdown").removeClass("white-text");
+    $("dt").removeClass("white-text");
     $(".select-wrapper li").removeClass("grey darken-4");
     $("th").removeClass("white-text");
     $("tr").removeClass("white-text");
     $("li").removeClass("white-text");
+    $("dt").removeClass("white-text");
+    $("dd").removeClass("white-text");
 }
 
 // Behåller temat mha local storage
@@ -191,6 +196,36 @@ $(function () {
             //Uppdaterar infon
 
             $("#restaurant-table").html(r);
+        });
+
+    });
+
+});
+
+// AJAX live-sökning efter maträtter
+$(function () {
+
+    $("#dish-searchbox").keyup(function (e) {
+        var rs = $("#dish-searchbox").val();
+        $.get("/Dish/Ajax?SearchString=" + rs, function (r) {
+            //Uppdaterar infon
+
+            $("#dish-table").html(r);
+        });
+
+    });
+
+});
+
+// AJAX live-sökning efter drycker
+$(function () {
+
+    $("#drink-searchbox").keyup(function (e) {
+        var rs = $("#drink-searchbox").val();
+        $.get("/Drink/Ajax?SearchString=" + rs, function (r) {
+            //Uppdaterar infon
+
+            $("#drink-table").html(r);
         });
 
     });

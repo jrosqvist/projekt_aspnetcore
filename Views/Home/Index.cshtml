@@ -2,9 +2,9 @@
     ViewData["Title"] = "Startsidan";
 }
 
-    <div class="parallax-container banner">
-        <div class="parallax"><img src="~/images/parallax4.jpg" class="responsive-img z-depth-1"></div>
-    </div>
+<!-- Stor bild-->
+<div class="banner" id="index-banner"></div>
+<!-- Slut på stor bild-->
 
 <div class="container pitch">
     <div class="row">
@@ -38,7 +38,7 @@
             <div class="col s12 l4 m10 offset-m1">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <img src="~/images/doubleroom.jpg" alt="" class="materialboxed">
+                        <img src="~/images/doubleroom.jpg" alt="Double room" class="materialboxed">
                         <a asp-area="" asp-controller="HotelBooking" asp-action="Create" class="halfway-fab btn-floating orange">
                             <i class="material-icons">hotel</i>
                         </a>
@@ -51,7 +51,8 @@
                         </p>
                     </div>
                     <div class="card-action">
-                        <a asp-area="" asp-controller="HotelBooking" asp-action="Create">Boka!</a>
+                        <a asp-area="" asp-controller="Home" asp-action="Hotel">Läs mer</a>
+                        <a asp-area="" asp-controller="HotelBooking" asp-action="Create">Boka hotell</a>
                     </div>
                 </div>
             </div>
@@ -59,7 +60,7 @@
             <div class="col s12 l4 m10 offset-m1">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <img src="~/images/superiorroom.jpg" alt="" class="materialboxed">
+                        <img src="~/images/superiorroom.jpg" alt="Double room superior" class="materialboxed">
                         <a asp-area="" asp-controller="HotelBooking" asp-action="Create" class="halfway-fab btn-floating orange">
                             <i class="material-icons">hotel</i>
                         </a>
@@ -72,7 +73,8 @@
                         </p>
                     </div>
                     <div class="card-action">
-                        <a asp-area="" asp-controller="HotelBooking" asp-action="Create">Boka!</a>
+                        <a asp-area="" asp-controller="Home" asp-action="Hotel">Läs mer</a>
+                        <a asp-area="" asp-controller="HotelBooking" asp-action="Create">Boka hotell</a>
                     </div>
                 </div>
             </div>
@@ -80,7 +82,7 @@
             <div class="col s12 l4 m10 offset-m1">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <img src="~/images/singleroom.jpg" alt="" class="materialboxed">
+                        <img src="~/images/singleroom.jpg" alt="Single room" class="materialboxed">
                         <a asp-area="" asp-controller="HotelBooking" asp-action="Create" class="halfway-fab btn-floating orange">
                             <i class="material-icons">hotel</i>
                         </a>
@@ -93,7 +95,8 @@
                         </p>
                     </div>
                     <div class="card-action">
-                        <a asp-area="" asp-controller="HotelBooking" asp-action="Create">Boka!</a>
+                        <a asp-area="" asp-controller="Home" asp-action="Hotel">Läs mer</a>
+                        <a asp-area="" asp-controller="HotelBooking" asp-action="Create">Boka hotell</a>
                     </div>
                 </div>
             </div>
@@ -118,8 +121,8 @@
             <div class="col s12 l6 m10 offset-m1">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <img src="~/images/food.jpg" alt="" class="materialboxed">
-                        <a href="#" class="halfway-fab btn-floating orange">
+                        <img src="~/images/food.jpg" alt="Our food" class="materialboxed">
+                        <a asp-area="" asp-controller="Home" asp-action="Restaurant" class="halfway-fab btn-floating orange">
                             <i class="material-icons">local_dining</i>
                         </a>
                     </div>
@@ -132,6 +135,7 @@
                     </div>
                     <div class="card-action">
                         <a asp-area="" asp-controller="Home" asp-action="Restaurant">Läs mer</a>
+                        <a asp-area="" asp-controller="RestaurantBooking" asp-action="Create">Boka bord</a>
                     </div>
                 </div>
             </div>
@@ -139,8 +143,8 @@
             <div class="col s12 l6 m10 offset-m1">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <img src="~/images/wine.jpg" alt="" class="materialboxed">
-                        <a href="#" class="halfway-fab btn-floating orange">
+                        <img src="~/images/wine.jpg" alt="Our drinks" class="materialboxed">
+                        <a asp-area="" asp-controller="Home" asp-action="Restaurant" class="halfway-fab btn-floating orange">
                             <i class="material-icons">local_dining</i>
                         </a>
                     </div>
@@ -153,50 +157,22 @@
                     </div>
                     <div class="card-action">
                         <a asp-area="" asp-controller="Home" asp-action="Restaurant">Läs mer</a>
+                        <a asp-area="" asp-controller="RestaurantBooking" asp-action="Create">Boka bord</a>
                     </div>
                 </div>
             </div>
 
-            <!--
-    <div class="col s12 l8 offset-l2">
-        <ul class="tabs">
-            <li class="tab col s6"><a href="#tab-one" class="orange-text">Meny</a></li>
-            <li class="tab col s6"><a href="#tab-two" class="orange-text">Vinlista</a></li>
-        </ul>
-        <div class="col s12" id="tab-one">
-            <p>
-                It was popularised in the 1960s with the release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum
-            </p>
-        </div>
-        <div class="col s12" id="tab-two">
-            <p>
-                It was popularised in the 1960s with the release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum
-            </p>
-            <p>
-                It was popularised in the 1960s with the release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum
-            </p>
-        </div>
-    </div>
-        -->
 
 
         </div>
     </div>
 </section>
 <!-- Slut på sektion-->
-
 <!-- Parallax-->
 <div class="parallax-container parallax-bottom">
-    <div class="parallax"><img src="~/images/parallax3.jpg" class="responsive-img z-depth-1"></div>
+    <div class="parallax"><img src="~/images/parallax3.jpg" class="responsive-img z-depth-1" alt="Our restaurant"></div>
 </div>
 <!-- Slut på parallax-->
-
 <!--Kontakt-sektionen-->
 <section class="big-section scrollspy" id="contact">
     <div class="container">

@@ -13,12 +13,12 @@ namespace asp_projekt.Models
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         public int Id { get; set; }
 
-        [Display(Name = "Namn på rumstyp")]
+        [Display(Name = "Namn")]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         [MaxLength(128, ErrorMessage = "Max 128 tecken!")]
         public string RoomName { get; set; }
 
-        [Display(Name = "Antal av rumtyp")]
+        [Display(Name = "Antal")]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         [RegularExpression("([0-9]+)", ErrorMessage = "Bara siffror tack!")]
         [Range(1, 100, ErrorMessage = "Minst 1, max 100!")]
@@ -42,7 +42,7 @@ namespace asp_projekt.Models
         [Range(8, 100, ErrorMessage = "8 - 10 kvadrat!")]
         public int SquareMeter { get; set; }
 
-        [Display(Name = "Sängbredd i centimeter")]
+        [Display(Name = "Sängbredd i cm")]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
         [RegularExpression("([0-9]+)", ErrorMessage = "Bara siffror tack!")]
         [Range(90, 260, ErrorMessage = "90 - 260 cm tack!")]
