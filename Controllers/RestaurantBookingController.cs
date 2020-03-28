@@ -141,7 +141,7 @@ namespace asp_projekt.Controllers
                 {
                     client.ServerCertificateValidationCallback = (s, c, h, e) => true;
                     client.Connect("smtp.gmail.com", 587, false);
-                    client.Authenticate("pelicanpalace.ab@gmail.com", "Core3Projekt");
+                    client.Authenticate("pelicanpalace.ab@gmail.com", "password");
                     client.Send(message);
                     client.Disconnect(true);
                 };
